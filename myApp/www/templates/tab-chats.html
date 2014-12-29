@@ -1,0 +1,15 @@
+<ion-view view-title="路一直都在">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right item-icon-left" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <i class="icon {{chat.icon}}"></i>
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-arrow-right-c"></i>
+        <!-- <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button> -->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

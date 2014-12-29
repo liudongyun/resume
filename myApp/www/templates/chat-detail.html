@@ -1,0 +1,72 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="路一直都在" class="info">
+  <ion-content class="padding">
+    <div ng-repeat="info in infos" ng-if="chat.id==0">
+      <div class="row" ng-if="info.contLeft.length>0">
+        <div class="col col-75">
+          <div class="card">
+            <div class="item item-text-wrap item1">
+              {{info.contLeft}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" ng-if="info.contRight.length>0">
+        <div class="col col-75 col-offset-25">
+          <div class="card">
+            <div class="item item-text-wrap item2">
+              {{info.contRight}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div ng-repeat="work in works" ng-if="chat.id==1">
+      <div class="row" ng-if="work.contLeft.length>0">
+        <div class="col col-75">
+          <div class="card">
+            <div class="item item-text-wrap item1">
+              {{work.contLeft}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" ng-if="work.contRight.length>0">
+        <div class="col col-75 col-offset-25">
+          <div class="card">
+            <div class="item item-text-wrap item2">
+              {{work.contRight}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div ng-if="chat.id==2" class="say">
+      <div class="card">
+        <div class="item item-divider">
+          I want to say......
+        </div>
+        <div class="item item-text-wrap">
+          <p>人生中总会有很多的偶然和必然，我偶然的遇到了前端这个职业，我想获取到最新的前端技术，得到最好的成长，所以我必然会来北京</p>
+          <p>在一次次的"又被打击了"的惨痛经历中,我还能顽强的活下来,真是阿弥陀佛呀~</p>
+          <p>我后来总结了一下:应该就是三个字"不聪明"</p>
+          <p>我再后来给自己了一个治疗方案:不聪明就勤奋点吧~嘴勤心勤~勤能补拙~</p>
+          <p>我还给自己找了一个"无比完美"的借口:谁一生下来就是什么都会的呢？哈哈哈哈哈~</p>
+          <p>与其说自己是想跟着牛X的团队学技术,不如说是跟他们学习一种如何获取新鲜知识的方法和解决bug的思路,毕竟这才是人生中值得拥有的财富！</p>
+        </div>        
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
